@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Cookbook!</string>
+    <string name="app_name">&quot;@cookbook&quot;</string>
+<string name="resolve_view">View recipe</string>
+</resources>

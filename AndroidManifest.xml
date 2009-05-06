@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.romeda.cookbook"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+        <activity android:label="@string/app_name" android:name="RecipeList">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        <intent-filter><action android:name="android.intent.action.VIEW"></action><action android:name="android.intent.action.EDIT"></action><action android:name="android.intent.action.PICK"></action><category android:name="android.intent.category.DEFAULT"></category><data android:mimeType="vnd.android.cursor.dir/vnd.romeda.recipe"></data>
+
+
+
+
+</intent-filter>
+<intent-filter><action android:name="android.intent.action.GET_CONTENT"></action><category android:name="android.intent.category.DEFAULT"></category><data android:mimeType="vnd.android.cursor.item/vnd.romeda.recipe"></data>
+
+
+</intent-filter>
+</activity>
+    
+
+
+<provider android:name="RecipeProvider" android:grantUriPermissions="true" android:authorities="org.romeda.provider.Cookbook"></provider>
+<activity android:name="RecipeViewer"><intent-filter android:label="@string/resolve_view"><action android:name="android.intent.action.VIEW"></action>
+
+<action android:name="com.android.notepad.action.VIEW_RECIPE"></action>
+<action android:name="android.intent.category.DEFAULT"></action>
+<category android:name="android.intent.category.DEFAULT"></category><data android:mimeType="vnd.android.cursor.item/vnd.romeda.recipe"></data>
+
+</intent-filter>
+</activity>
+</application>
+    <uses-sdk android:minSdkVersion="3"/>
+</manifest> 
